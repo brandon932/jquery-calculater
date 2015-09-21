@@ -4,7 +4,7 @@ app.controller("calculate", function($scope){
   var num = [];
   var expression = [];
 
-  $scope.buttonVal = function(){
+  $scope.buttonVal = function(event){
     x = event.target;
     btn = angular.element(x).html();
 
