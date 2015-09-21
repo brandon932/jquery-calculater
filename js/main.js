@@ -1,44 +1,44 @@
-var arrayOfClickButtons = [];
-var total = [];
-
-$("span").not($(".operator")).on("click", function(){
-  var btnClicked = $(this).html();
-  addToScreen(btnClicked);
-  arrayOfClickButtons.push(btnClicked);
-  console.log(arrayOfClickButtons + "is num array");
-  console.log(total + " is total array");
-});
-
-$(".operator").not($("#cancel, #calc")).on("click", function(){
-
-  var btnClicked = $(this).html();
-  addToScreen(btnClicked);
-  total.push(arrayOfClickButtons.join(""));
-  arrayOfClickButtons = [];
-  total.push(btnClicked);
-  console.log(arrayOfClickButtons + "is num array");
-  console.log(total + " is total array");
-});
-
-$("#cancel").on("click", function(e){
-  $("#screen").html("");
-  arrayOfClickButtons = [];
-  total = [];
-});
-
-$("#calc").on("click", function(e){
-  total.push(arrayOfClickButtons.join(""));
-  var answer =calculate2(total);
-  $("#screen").html(answer);
-  arrayOfClickButtons = [answer];
-  total = [];
-  console.log(arrayOfClickButtons + "is num array");
-  console.log(total + " is total array");
-});
-
-function addToScreen(btn){
-  $("#screen").append(btn + '&nbsp;');
-}
+// var arrayOfClickButtons = [];
+// var total = [];
+//
+// $("span").not($(".operator")).on("click", function(){
+//   var btnClicked = $(this).html();
+//   addToScreen(btnClicked);
+//   arrayOfClickButtons.push(btnClicked);
+//   console.log(arrayOfClickButtons + "is num array");
+//   console.log(total + " is total array");
+// });
+//
+// $(".operator").not($("#cancel, #calc")).on("click", function(){
+//
+//   var btnClicked = $(this).html();
+//   addToScreen(btnClicked);
+//   total.push(arrayOfClickButtons.join(""));
+//   arrayOfClickButtons = [];
+//   total.push(btnClicked);
+//   console.log(arrayOfClickButtons + "is num array");
+//   console.log(total + " is total array");
+// });
+//
+// $("#cancel").on("click", function(e){
+//   $("#screen").html("");
+//   arrayOfClickButtons = [];
+//   total = [];
+// });
+//
+// $("#calc").on("click", function(e){
+//   total.push(arrayOfClickButtons.join(""));
+//   var answer =calculate2(total);
+//   $("#screen").html(answer);
+//   arrayOfClickButtons = [answer];
+//   total = [];
+//   console.log(arrayOfClickButtons + "is num array");
+//   console.log(total + " is total array");
+// });
+//
+// function addToScreen(btn){
+//   $("#screen").append(btn + '&nbsp;');
+// }
 
 
 function calculate2(arr){
