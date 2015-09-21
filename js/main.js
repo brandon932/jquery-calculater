@@ -64,7 +64,6 @@ function calculate2(arr){
       }
     }
   }
-  console.log(workArr);
   return workArr;
 }
 
